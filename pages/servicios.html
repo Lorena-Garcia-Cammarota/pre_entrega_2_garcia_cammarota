@@ -16,15 +16,44 @@
     <!-- Inicio del encabezado-->
     <header>
         <!-- Inicio del nav-->
-        <nav class="nav">
-            <div><img class="logo" src="../assets/images/logo.png" alt="Logo"></div>
-            <ul class="nav-list">
-                <li><a href="../index.html" class="nav-link">Inicio</a></li>
-                <li><a href="sobrenosotros.html" class="nav-link">Sobre Nosotros</a></li>
-                <li><a href="servicios.html" class="nav-link">Servicios</a></li>
-                <li><a href="promociones.html" class="nav-link">Promociones</a></li>
-                <li><a href="contacto.html" class="nav-link">Contacto</a></li>
-            </ul>
+        <nav class="navbar bg-body-tertiary sticky-top navbar-expand-md navbar-dark bg-primary" data-bs-theme="dark">
+            <div class="container-fluid">
+                <div class="row align-items-center">
+                    <div class="col-6">
+                        <a class="navbar-brand" href="../index.html"><img src="../assets/images/logo.png" alt="Logo" width="100px"> <i class="bi bi-logo"></i></a>
+                    </div>
+                    <div class="col-6 ms-auto">
+                        <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar" aria-label="Toggle navigation">
+                            <span class="navbar-toggler-icon"></span>
+                        </button>
+                    </div>
+                </div>
+                <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
+                    <div class="offcanvas-header">
+                        <h5 class="offcanvas-title" id="offcanvasNavbarLabel">Ecowash</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+                    </div>
+                    <div class="offcanvas-body">
+                        <ul class="navbar-nav justify-content-end flex-grow-1">
+                            <li class="nav-item">
+                                <a class="nav-link" aria-current="page" href="../index.html">Inicio</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="sobrenosotros.html">Sobre Nosotros</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="servicios.html">Servicios</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="promociones.html">Promociones</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link"  href="contacto.html">Contacto</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
         </nav>
         <!-- Cierre del nav-->
     </header>
@@ -35,7 +64,7 @@
         <section class="servicios">
             <h1>SERVICIOS</h1>
             <img src="../assets/images/encerado.jpg" alt="Limpieza de autolavado">
-            <div class="servicios-conteiner">
+            <div class="servicios-container">
                 <h2>¿Por qué es ecológico?</h2>
                 <p>
                     Ecowash es amigable con el medio ambiente porque sólo consume entre 3 y 5 litros de agua por lavado
@@ -45,7 +74,7 @@
                     Se trata de un sistema innovador que no raya la pintura del auto.
                 </p>
             </div>
-            <div class="servicios-conteiner-span">
+            <div class="servicios-container-span">
                 <p>
                     <span>Conoce nuestros paquetes y elige el que mejor se ajuste a tus necesidades.
                         <br>
@@ -53,7 +82,7 @@
                 </p>
             </div>
             <article class="servicios-card">
-                <div class="servicios-card-conteiner">
+                <div class="servicios-card-container">
                     <img src="../assets/images/detalladoexpress.jpg" alt="Detallado Express">
                     <h2>1- Detallado Express</h2>
                     <p>
@@ -72,7 +101,7 @@
                         * Limpieza y abrillantador en rines y llantas.
                     </p>
                 </div>
-                <div class="servicios-card-conteiner">
+                <div class="servicios-card-container">
                     <img src="../assets/images/detalladointerior.jpg" alt="Detallado Interior">
                     <h2>2- Detallado Interior</h2>
                     <p>
@@ -89,7 +118,7 @@
                         * Eliminación de olores con ozono.
                     </p>
                 </div>
-                <div class="servicios-card-conteiner">
+                <div class="servicios-card-container">
                     <img src="../assets/images/detalladoexterior.jpg" alt="Detallado Exterior">
                     <h2>3- Detallado Exterior</h2>
                     <p>
@@ -110,7 +139,7 @@
                         * Limpieza y abrillantador en rines y llantas.
                     </p>
                 </div>
-                <div class="servicios-card-conteiner">
+                <div class="servicios-card-container">
                     <img src="../assets/images/detalladoautosnuevos.jpg" alt="Detallado Autos Nuevos">
                     <h2>4- Detallado Autos Nuevos</h2>
                     <p>
@@ -129,7 +158,7 @@
                         * Protección de sellado con teflón en carrocería.
                     </p>
                 </div>
-                <div class="servicios-card-conteiner">
+                <div class="servicios-card-container">
                     <h2>5- Detallado Completo</h2>
                     <p>
                         * Lavado de carrocería exterior.
