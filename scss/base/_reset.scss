@@ -1,0 +1,42 @@
+/* Reset */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Fuente Web de texto - importada de google*/
+
+@import url('https://fonts.googleapis.com/css2?family=Fira+Sans:wght@600&family=Kanit:wght@300;400&family=Poppins:ital,wght@0,400;1,300&display=swap');
+
+/* En todas las Layouts */
+
+body {
+    font-family: $bodyFont;
+    background-color: $bodyColor;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+main {
+    flex: 1;
+}
+
+h1 {
+    text-align: center;
+    font-size: 30px;
+    font-family: 'Fira Sans', serif;
+    font-weight: bolder;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+h2 {
+    font-family: 'Poppins';
+}
+
+p::selection{
+    background-color: #eceac198;
+}

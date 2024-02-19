@@ -1,0 +1,20 @@
+/* Header - Navbar */
+
+.nav-link {
+    color: #FFFFFF;
+    font-weight: bolder;
+    
+    &:hover {
+        color: #ffcc00;
+    }
+}
+
+.navbar-toggler {
+    position: absolute;
+    align-items: center;
+    right: 0;
+    margin-right: 15px;
+    top: 50%;
+    transform: translateY(-50%);
+}
+

@@ -1,0 +1,80 @@
+/*Sobre nosotros*/
+
+main {
+
+    .about-container {
+        margin: 20px;
+    }
+
+    .about-card {
+        display: flex;
+
+        img {
+            width: 45%;
+            height: 100%;
+            object-fit: cover;
+            padding: 20px;
+        }
+    }
+
+    .about-card-container {
+        padding: 15px;
+        display: flex;
+        gap: 10px;
+        align-items: center;
+        font-size: 18px;
+        text-align: justify;
+        
+    }
+
+    .pilares {
+        text-align: center;
+    }
+
+    .pilares-container {
+        padding: 5px;
+
+        h2 {
+            text-align: center;
+            padding: 5px;
+        }
+    }
+
+    .pilares-card {
+        display: flex;
+        flex-wrap: nowrap;
+        gap: 20px;
+        justify-content: space-between;
+        align-items: stretch;
+        margin: 20px 30px 20px 30px;
+
+        h3 {
+            margin: 10px;
+            text-align: center;
+        }
+    }
+
+    .pilares-card-container {
+        display: flex;
+        flex-direction: column; 
+        width: 250px;
+        height: 300px;
+        border: 2px solid $borderColor;
+        border-radius: 5px;
+        background-color: $bodyColor;
+        padding: 10px 25px 15px 25px;
+        margin: 10px;
+        text-align: justify;
+        align-items: center; 
+        transition: 1.5s;
+
+        p {
+            margin: auto;
+        }
+
+        &:hover{
+            background-color: $ligthcolor;
+            box-shadow: 3px 3px 13px 5px  $boxColor;
+        }
+    }
+}
