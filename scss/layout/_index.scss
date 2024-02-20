@@ -56,9 +56,16 @@ main {
         overflow: hidden;
         background-color: #D4AF37;
         border: 2px solid #B7950B;
+        cursor:pointer;
+        transition: 1.5s;
 
         &__span{
             white-space: nowrap;
+        }
+
+        &:hover {
+            transform: scale(1.1);
+            background-color: #ffcc00;
         }
     }
 

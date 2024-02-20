@@ -7,6 +7,10 @@
     &:hover {
         color: #ffcc00;
     }
+
+    &:active {
+        color: $borderColor;  
+    }
 }
 
 .navbar-toggler {

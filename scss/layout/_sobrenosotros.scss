@@ -10,7 +10,7 @@ main {
         display: flex;
 
         img {
-            width: 45%;
+            width: 50%;
             height: 100%;
             object-fit: cover;
             padding: 20px;
@@ -24,6 +24,7 @@ main {
         align-items: center;
         font-size: 18px;
         text-align: justify;
+        margin-top: 10px;
         
     }
 
@@ -42,7 +43,7 @@ main {
 
     .pilares-card {
         display: flex;
-        flex-wrap: nowrap;
+        flex-wrap: wrap;
         gap: 20px;
         justify-content: space-between;
         align-items: stretch;
@@ -58,7 +59,7 @@ main {
         display: flex;
         flex-direction: column; 
         width: 250px;
-        height: 300px;
+        height: 350px;
         border: 2px solid $borderColor;
         border-radius: 5px;
         background-color: $bodyColor;
@@ -66,6 +67,8 @@ main {
         margin: 10px;
         text-align: justify;
         align-items: center; 
+        justify-content: center;
+        overflow: hidden;
         transition: 1.5s;
 
         p {

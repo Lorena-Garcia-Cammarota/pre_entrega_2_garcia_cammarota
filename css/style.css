@@ -10,8 +10,12 @@
 /* Fuente Web de texto - importada de google*/
 /* En todas las Layouts */
 body {
-  font-family: "Segoe UI", "Tahoma", "Geneva", "Verdana", "sans-serif";
   background-color: #BDC3C7;
+  color: black;
+}
+
+body {
+  font-family: "Segoe UI", "Tahoma", "Geneva", "Verdana", "sans-serif";
   display: flex;
   flex-direction: column;
   min-height: 100vh;
@@ -38,6 +42,33 @@ p::selection {
   background-color: rgba(236, 234, 193, 0.5960784314);
 }
 
+/* utils */
+.btn-claro {
+  padding: 10px;
+  cursor: pointer;
+  background-color: rgba(96, 146, 216, 0.823);
+  color: black;
+  border: 2px solid transparent;
+}
+.btn-claro:hover {
+  background-color: rgba(41, 94, 169, 0.823);
+  transform: scale(1.1);
+  font-weight: bold;
+}
+
+.btn-grisceleste {
+  padding: 10px;
+  cursor: pointer;
+  background-color: rgba(102, 156, 175, 0.822);
+  color: black;
+  border: 2px solid transparent;
+}
+.btn-grisceleste:hover {
+  background-color: rgba(60, 101, 115, 0.822);
+  transform: scale(1.1);
+  font-weight: bold;
+}
+
 /* Header - Navbar */
 .nav-link {
   color: #FFFFFF;
@@ -45,6 +76,9 @@ p::selection {
 }
 .nav-link:hover {
   color: #ffcc00;
+}
+.nav-link:active {
+  color: rgb(235, 244, 185);
 }
 
 .navbar-toggler {
@@ -76,11 +110,21 @@ footer div a .facebook {
   width: 40px;
   margin-left: 20px;
 }
+footer div a .facebook:hover {
+  transform: scale(1.4);
+}
 footer div a .instagram {
   width: 55px;
 }
+footer div a .instagram:hover {
+  transform: scale(1.4);
+}
 footer div a .twitter {
   width: 35px;
+}
+footer div a .twitter:hover {
+  transform: scale(1.4);
+  background-color: white;
 }
 footer .facebook,
 footer .instagram,
@@ -138,9 +182,15 @@ main .index-circles-container {
   overflow: hidden;
   background-color: #D4AF37;
   border: 2px solid #B7950B;
+  cursor: pointer;
+  transition: 1.5s;
 }
 main .index-circles-container__span {
   white-space: nowrap;
+}
+main .index-circles-container:hover {
+  transform: scale(1.1);
+  background-color: #ffcc00;
 }
 main .wsp {
   width: 55px;
@@ -165,7 +215,7 @@ main .about-card {
   display: flex;
 }
 main .about-card img {
-  width: 45%;
+  width: 50%;
   height: 100%;
   object-fit: cover;
   padding: 20px;
@@ -177,6 +227,7 @@ main .about-card-container {
   align-items: center;
   font-size: 18px;
   text-align: justify;
+  margin-top: 10px;
 }
 main .pilares {
   text-align: center;
@@ -190,7 +241,7 @@ main .pilares-container h2 {
 }
 main .pilares-card {
   display: flex;
-  flex-wrap: nowrap;
+  flex-wrap: wrap;
   gap: 20px;
   justify-content: space-between;
   align-items: stretch;
@@ -204,7 +255,7 @@ main .pilares-card-container {
   display: flex;
   flex-direction: column;
   width: 250px;
-  height: 300px;
+  height: 350px;
   border: 2px solid rgb(235, 244, 185);
   border-radius: 5px;
   background-color: #BDC3C7;
@@ -212,6 +263,8 @@ main .pilares-card-container {
   margin: 10px;
   text-align: justify;
   align-items: center;
+  justify-content: center;
+  overflow: hidden;
   transition: 1.5s;
 }
 main .pilares-card-container p {
@@ -241,6 +294,7 @@ main .servicios-container-span {
   width: 100%;
   background-color: #f0f0f0;
   padding: 20px;
+  animation-duration: 3s;
 }
 main .servicios-container-span p {
   display: block;
@@ -330,6 +384,21 @@ main .grid .box {
   border: 1px solid white;
   transition: 1.5s;
 }
+main .grid .box div {
+  z-index: 3;
+  border-radius: 14px;
+  background-color: rgba(17, 17, 17, 0.8039215686);
+  color: white;
+  font-weight: bold;
+  width: 100%;
+  height: 100%;
+  padding: 10px;
+  display: grid;
+  opacity: 0.5;
+}
+main .grid .box h2 {
+  text-align: center;
+}
 main .grid .box__promocion-1 {
   grid-area: promocion-1;
 }
@@ -348,22 +417,11 @@ main .grid .box__promocion-5 {
 main .grid .box__promocion-6 {
   grid-area: promocion-6;
 }
-main .grid .box div {
-  z-index: 3;
-  border-radius: 14px;
-  background-color: rgba(17, 17, 17, 0.8039215686);
-  color: white;
-  font-weight: bold;
-  width: 100%;
-  height: 100%;
-  padding: 10px;
-  display: grid;
-  opacity: 0.5;
+main .grid .box:hover {
+  background-color: #b3bdec;
+  box-shadow: 3px 3px 13px 5px rgba(17, 17, 17, 0.1607843137);
 }
-main .grid .box div h2 {
-  text-align: center;
-}
-main .grid .box img {
+main .grid img {
   width: 100%;
   height: auto;
   object-fit: cover;
@@ -375,10 +433,6 @@ main .grid .box img {
   box-shadow: 2px 2px 6px 2px rgba(255, 235, 205, 0.193);
   transition: 1.5s;
   filter: brightness(0.7);
-}
-main .grid .box:hover {
-  background-color: #b3bdec;
-  box-shadow: 3px 3px 13px 5px rgba(17, 17, 17, 0.1607843137);
 }
 
 /* Contacto */
@@ -403,7 +457,8 @@ main .contact-info div {
   text-align: center;
 }
 
-/*Media Query Index*/
+/* Media Query Desktop, tablet y mobile */
+/* Media Query Index */
 @media (max-width: 1024px) {
   .index-circles-container {
     width: 120px;
@@ -434,17 +489,102 @@ main .contact-info div {
     margin-right: 5px;
   }
 }
+/* Media Query Sobrenosotros */
+@media (max-width: 1024px) {
+  .about-card {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+  img {
+    width: 70% !important;
+    margin-bottom: 15px;
+  }
+  .about-card-container {
+    padding: 20px;
+    margin: 15px 15px 0px 15px;
+  }
+  .pilares-card-container {
+    height: 340px;
+  }
+}
+@media (max-width: 768px) {
+  .about-card {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+  img {
+    width: 70% !important;
+    margin-bottom: 15px;
+  }
+  .about-card-container {
+    padding: 20px;
+    margin: 15px 15px 0px 15px;
+  }
+  .pilares-card {
+    gap: 0px;
+    justify-content: center;
+    align-items: center;
+    padding: 10px 10px 10px 20px;
+  }
+}
+@media (max-width: 380px) {
+  .about-card {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+  img {
+    width: 70% !important;
+    margin-bottom: 15px;
+  }
+  .about-card-container {
+    padding: 20px;
+    margin: 15px 15px 0px 15px;
+  }
+  .pilares-card {
+    gap: 0px;
+    justify-content: center;
+    align-items: center;
+    padding: 10px 10px 10px 20px;
+  }
+}
+/* Media Query Servicios */
+/* Media Query Promociones */
+@media (max-width: 768px) {
+  .grid {
+    grid-template-rows: repeat(6, 300px);
+  }
+  .box {
+    width: 100%;
+    height: 300px;
+  }
+}
+@media (max-width: 480px) {
+  .grid {
+    grid-template-rows: repeat(6, 300px);
+  }
+  .box {
+    height: 300px;
+  }
+}
 /* Media Query Contacto */
 @media (max-width: 1024px) {
   .contact-info {
     flex-direction: column;
+  }
+  .maps {
+    max-width: 500px;
+    height: 320px;
+    margin: 10px 10px;
   }
 }
 @media (max-width: 768px) {
   .contact {
     text-align: center;
   }
-  .contact h2 {
+  h2 {
     padding: 10px;
   }
   .contact-ubicacion {
@@ -453,30 +593,24 @@ main .contact-info div {
     align-items: center;
     margin: 15px;
   }
+  .maps {
+    max-width: 450px;
+    height: 300px;
+    margin: 10px 10px;
+  }
   .contact-info {
     display: flex;
     flex-direction: column;
     margin-top: 20px;
   }
-  .contact-info div {
+  .contact-div {
     text-align: center;
     margin-bottom: 10px;
   }
-  .contact-ubicacion iframe {
-    width: 100%;
-    height: 300px;
-  }
 }
 @media (max-width: 380px) {
-  .contact h2 {
+  h2 {
     font-size: 24px;
-  }
-  .contact-info {
-    flex-direction: column;
-  }
-  .contact-info div {
-    margin-bottom: 10px;
-    padding: 5px;
   }
   .contact-ubicacion {
     flex-direction: column;
@@ -485,11 +619,20 @@ main .contact-info div {
   .contact-ubicacion h3 {
     font-size: 18px;
   }
-  .contact-ubicacion iframe {
-    width: 100%;
-    height: 300px;
+  .maps {
+    max-width: 340px;
+    height: 150px;
+    margin: 10px 10px;
+  }
+  .contact-info {
+    flex-direction: column;
+  }
+  .contact-info div {
+    margin-bottom: 10px;
+    padding: 5px;
   }
 }
+/* Media Query Footer */
 @media (max-width: 1024px) {
   .facebook,
   .instagram,
@@ -499,37 +642,45 @@ main .contact-info div {
     padding-right: 5px;
   }
   .facebook {
-    width: 40px;
-    margin-left: 20px;
+    width: 30px;
+    margin-left: 10px;
   }
   .instagram {
-    width: 55px;
+    width: 40px;
   }
   .twitter {
-    width: 35px;
+    width: 25px;
   }
 }
 @media (max-width: 768px) {
-  footer {
-    padding: 10px;
+  .facebook,
+  .instagram,
+  .twitter {
+    bottom: 10px;
+    right: 10px;
+    padding-right: 5px;
   }
   .facebook,
   .instagram,
   .twitter,
   .wsp {
-    width: 30px;
+    width: 5px;
     margin: 0 5px;
-  }
-  .facebook {
-    width: 30px;
   }
 }
 @media (max-width: 380px) {
   .facebook,
   .instagram,
+  .twitter {
+    bottom: 10px;
+    right: 10px;
+    padding-right: 5px;
+  }
+  .facebook,
+  .instagram,
   .twitter,
   .wsp {
-    width: 30px;
+    width: 5px;
     margin: 0 5px;
   }
 }

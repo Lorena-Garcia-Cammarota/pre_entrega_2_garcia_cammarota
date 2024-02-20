@@ -13,8 +13,20 @@
 /* En todas las Layouts */
 
 body {
+    @if $theme == light {
+        background-color:#BDC3C7;
+        color: black;
+    } @else if $theme == dark {
+        background-color: #5f4c6d;
+        color:white;
+    } @else {
+        background-color: #aef4f3;
+        color:black;
+    }
+}
+
+body {
     font-family: $bodyFont;
-    background-color: $bodyColor;
     display: flex;
     flex-direction: column;
     min-height: 100vh;
@@ -40,3 +52,4 @@ h2 {
 p::selection{
     background-color: #eceac198;
 }
+

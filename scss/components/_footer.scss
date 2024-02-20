@@ -20,14 +20,24 @@ footer {
         .facebook{
             width: 40px;
             margin-left: 20px;  
+            &:hover{
+                transform: scale(1.4);
+            }
         }
 
         .instagram{
             width: 55px;
+            &:hover{
+                transform: scale(1.4);
+            }
         }
 
         .twitter{
             width: 35px;
+            &:hover{
+                transform: scale(1.4);
+                background-color: white;
+            }
         }
     }
 
