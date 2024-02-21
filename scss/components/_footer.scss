@@ -2,8 +2,7 @@
 
 footer {
     display: flex;
-    align-items: center;
-    justify-content: center;
+    @include posicion (center, center);
     background-color: rgba(0, 0, 0, 0.685);
     color: #FFFFFF;
     padding: 8px;

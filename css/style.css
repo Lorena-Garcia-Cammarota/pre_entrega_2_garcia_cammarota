@@ -93,8 +93,8 @@ p::selection {
 /*footer*/
 footer {
   display: flex;
-  align-items: center;
   justify-content: center;
+  align-items: center;
   background-color: rgba(0, 0, 0, 0.685);
   color: #FFFFFF;
   padding: 8px;
@@ -164,6 +164,9 @@ main .bottom-circles {
   width: 100%;
 }
 main .index-circles-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   width: 150px;
   height: 150px;
   border-radius: 50%;
@@ -172,13 +175,10 @@ main .index-circles-container {
   padding: 20px;
   margin: 5px;
   margin-right: 30px;
-  display: flex;
-  align-items: center;
   justify-content: center;
   text-align: center;
   font-weight: bold;
   box-sizing: border-box;
-  flex-direction: column;
   overflow: hidden;
   background-color: #D4AF37;
   border: 2px solid #B7950B;
@@ -254,6 +254,7 @@ main .pilares-card h3 {
 main .pilares-card-container {
   display: flex;
   flex-direction: column;
+  align-items: center;
   width: 250px;
   height: 350px;
   border: 2px solid rgb(235, 244, 185);
@@ -262,7 +263,6 @@ main .pilares-card-container {
   padding: 10px 25px 15px 25px;
   margin: 10px;
   text-align: justify;
-  align-items: center;
   justify-content: center;
   overflow: hidden;
   transition: 1.5s;
@@ -294,6 +294,7 @@ main .servicios-container-span {
   width: 100%;
   background-color: #f0f0f0;
   padding: 20px;
+  animation: bounce;
   animation-duration: 3s;
 }
 main .servicios-container-span p {
@@ -311,16 +312,16 @@ main .servicios-card {
 main .servicios-card-container {
   width: 400px;
   height: 550px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: justify;
+  justify-content: center;
   border: 2px solid rgb(235, 244, 185);
   border-radius: 5px;
   background-color: #BDC3C7;
   padding: 20px;
   margin: 20px;
-  text-align: justify;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
   transition: 1.5s;
 }
 main .servicios-card-container img {
@@ -366,10 +367,10 @@ main .auto {
 main .grid {
   padding: 20px;
   display: grid;
-  grid-template-rows: repeat(2, 300px);
+  grid-template-rows: repeat(2, 1fr);
   gap: 15px;
+  justify-content: center;
   align-items: center;
-  justify-items: center;
   grid-template-areas: "promocion-1 promocion-2 promocion-3" "promocion-4 promocion-5 promocion-6";
 }
 main .grid .box {
@@ -377,8 +378,8 @@ main .grid .box {
   height: 310px;
   font-weight: bold;
   display: flex;
-  align-items: center;
   justify-content: center;
+  align-items: center;
   position: relative;
   border-radius: 15px;
   border: 1px solid white;
@@ -496,16 +497,16 @@ main .contact-info div {
     align-items: center;
     text-align: center;
   }
-  img {
-    width: 70% !important;
+  .about-card img {
+    width: 70%;
     margin-bottom: 15px;
   }
-  .about-card-container {
+  .about-card .about-card-container {
     padding: 20px;
     margin: 15px 15px 0px 15px;
   }
-  .pilares-card-container {
-    height: 340px;
+  .about-card .pilares-card-container {
+    height: auto;
   }
 }
 @media (max-width: 768px) {
@@ -514,15 +515,15 @@ main .contact-info div {
     align-items: center;
     text-align: center;
   }
-  img {
-    width: 70% !important;
+  .about-card img {
+    width: 70%;
     margin-bottom: 15px;
   }
-  .about-card-container {
+  .about-card .about-card-container {
     padding: 20px;
     margin: 15px 15px 0px 15px;
   }
-  .pilares-card {
+  .about-card .pilares-card {
     gap: 0px;
     justify-content: center;
     align-items: center;
@@ -535,15 +536,15 @@ main .contact-info div {
     align-items: center;
     text-align: center;
   }
-  img {
-    width: 70% !important;
+  .about-card img {
+    width: 70%;
     margin-bottom: 15px;
   }
-  .about-card-container {
+  .about-card .about-card-container {
     padding: 20px;
     margin: 15px 15px 0px 15px;
   }
-  .pilares-card {
+  .about-card .pilares-card {
     gap: 0px;
     justify-content: center;
     align-items: center;
@@ -551,22 +552,48 @@ main .contact-info div {
   }
 }
 /* Media Query Servicios */
-/* Media Query Promociones */
 @media (max-width: 768px) {
-  .grid {
-    grid-template-rows: repeat(6, 300px);
+  .servicio-auto {
+    width: 85%;
   }
-  .box {
-    width: 100%;
-    height: 300px;
+  .servicios-card-container {
+    width: 350px;
+    height: 450px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: justify;
+    justify-content: center;
   }
 }
-@media (max-width: 480px) {
-  .grid {
-    grid-template-rows: repeat(6, 300px);
+@media (max-width: 380px) {
+  .servicio-auto {
+    width: 85%;
   }
-  .box {
-    height: 300px;
+  .servicios-card-container {
+    width: 77% !important;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: justify;
+    justify-content: center;
+  }
+  .servicios-card-container img {
+    width: 100% !important;
+  }
+}
+/* Media Query Promociones */
+@media (max-width: 1024px) {
+  .grid {
+    grid-template-areas: "promocion-1 promocion-2" "promocion-3 promocion-4" "promocion-5 promocion-6" !important;
+  }
+}
+@media (max-width: 768px) {
+  .auto {
+    width: 85%;
+  }
+  .grid {
+    grid-template-areas: "promocion-1" "promocion-2" "promocion-3" "promocion-4" "promocion-5" "promocion-6" !important;
   }
 }
 /* Media Query Contacto */
@@ -634,38 +661,47 @@ main .contact-info div {
 }
 /* Media Query Footer */
 @media (max-width: 1024px) {
-  .facebook,
-  .instagram,
-  .twitter {
+  div a .facebook,
+  div a .instagram,
+  div a .twitter {
     bottom: 10px;
     right: 10px;
     padding-right: 5px;
+    transition: none;
+  }
+  .facebook,
+  .instagram,
+  .twitter,
+  .wsp {
+    transition: width 0.3s ease;
   }
   .facebook {
-    width: 30px;
-    margin-left: 10px;
+    width: 10px;
+    margin-left: 5px;
   }
   .instagram {
-    width: 40px;
+    width: 8px;
   }
   .twitter {
-    width: 25px;
+    width: 6px;
+  }
+  .wsp {
+    width: 15px;
   }
 }
 @media (max-width: 768px) {
   .facebook,
   .instagram,
   .twitter {
-    bottom: 10px;
-    right: 10px;
+    bottom: 15px;
+    right: 15px;
     padding-right: 5px;
+    width: 30px;
+    margin: 5px;
   }
-  .facebook,
-  .instagram,
-  .twitter,
   .wsp {
-    width: 5px;
-    margin: 0 5px;
+    width: 15px;
+    border-radius: 70%;
   }
 }
 @media (max-width: 380px) {

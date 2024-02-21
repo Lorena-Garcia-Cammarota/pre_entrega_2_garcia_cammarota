@@ -10,8 +10,7 @@ main {
         display: flex;
 
         img {
-            width: 50%;
-            height: 100%;
+            @include tam (50%, 100%);
             object-fit: cover;
             padding: 20px;
         }
@@ -45,8 +44,7 @@ main {
         display: flex;
         flex-wrap: wrap;
         gap: 20px;
-        justify-content: space-between;
-        align-items: stretch;
+        @include posicion (space-between, stretch);
         margin: 20px 30px 20px 30px;
 
         h3 {
@@ -56,17 +54,14 @@ main {
     }
 
     .pilares-card-container {
-        display: flex;
-        flex-direction: column; 
-        width: 250px;
-        height: 350px;
+        @include flex ();
+        @include tam (250px, 350px);
         border: 2px solid $borderColor;
         border-radius: 5px;
         background-color: $bodyColor;
         padding: 10px 25px 15px 25px;
         margin: 10px;
         text-align: justify;
-        align-items: center; 
         justify-content: center;
         overflow: hidden;
         transition: 1.5s;

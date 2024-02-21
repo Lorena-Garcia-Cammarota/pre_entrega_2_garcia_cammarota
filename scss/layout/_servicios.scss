@@ -24,6 +24,7 @@ main {
         width: 100%;
         background-color: #f0f0f0; 
         padding: 20px; 
+        animation: bounce;
         animation-duration: 3s; 
 
         p{
@@ -43,23 +44,19 @@ main {
     }
 
     .servicios-card-container {
-        width: 400px;
-        height: 550px;
+        @include tam (400px, 550px);
+        @include flex ();
+        text-align: justify;
+        justify-content: center; 
         border: 2px solid $borderColor;
         border-radius: 5px;
         background-color: $bodyColor;
         padding: 20px;
         margin: 20px;
-        text-align: justify;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center; 
         transition: 1.5s; 
 
         img {
-            width: 340px;
-            height: 200px;
+            @include tam (340px, 200px);
             padding: 20px; 
             object-fit: cover;
             overflow: hidden;
@@ -91,8 +88,7 @@ main {
 
         &:hover img{
             filter: blur(0);
-            width: 400px;
-            height: 250px;
+            @include tam (400px, 250px);
         }
     }
 }

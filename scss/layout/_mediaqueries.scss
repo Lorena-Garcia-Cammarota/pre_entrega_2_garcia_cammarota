@@ -39,7 +39,6 @@
     }
 }
 
-
 /* Media Query Sobrenosotros */
 
 @media (max-width: 1024px){
@@ -48,21 +47,20 @@
         flex-direction: column; 
         align-items: center; 
         text-align: center;
-    }
 
-    img {
-        width: 70% !important;
-        margin-bottom: 15px; 
-    }
-    
-    .about-card-container {
-        padding: 20px;
-        margin: 15px 15px 0px 15px; 
-    }
+        img {
+            width: 70%;
+            margin-bottom: 15px; 
+        }
+        
+        .about-card-container {
+            padding: 20px;
+            margin: 15px 15px 0px 15px; 
+        }
 
-
-    .pilares-card-container {
-        height: 340px;
+        .pilares-card-container {
+            height: auto;
+        }
     }
 }   
 
@@ -72,23 +70,24 @@
         flex-direction: column; 
         align-items: center; 
         text-align: center;
-    }
-
-    img {
-        width: 70% !important;
-        margin-bottom: 15px; 
-    }
     
-    .about-card-container {
-        padding: 20px;
-        margin: 15px 15px 0px 15px; 
-    }
 
-    .pilares-card {
-        gap: 0px;
-        justify-content: center;
-        align-items: center;
-        padding: 10px 10px 10px 20px;
+        img {
+            width: 70%;
+            margin-bottom: 15px; 
+        }
+        
+        .about-card-container {
+            padding: 20px;
+            margin: 15px 15px 0px 15px; 
+        }
+
+        .pilares-card {
+            gap: 0px;
+            justify-content: center;
+            align-items: center;
+            padding: 10px 10px 10px 20px;
+        }
     }
 }
 
@@ -98,68 +97,84 @@
         flex-direction: column; 
         align-items: center; 
         text-align: center;
-    }
-
-    img {
-        width: 70% !important;
-        margin-bottom: 15px; 
-    }
     
-    .about-card-container {
-        padding: 20px;
-        margin: 15px 15px 0px 15px; 
-    }
 
-    .pilares-card {
-        gap: 0px;
-        justify-content: center;
-        align-items: center;
-        padding: 10px 10px 10px 20px;
+        img {
+            width: 70%;
+            margin-bottom: 15px; 
+        }
+        
+        .about-card-container {
+            padding: 20px;
+            margin: 15px 15px 0px 15px; 
+        }
+
+        .pilares-card {
+            gap: 0px;
+            justify-content: center;
+            align-items: center;
+            padding: 10px 10px 10px 20px;
+        }
     }
 }
 
 
 /* Media Query Servicios */
 
-@media (max-width: 1024px){
-
-}
-
 @media (max-width: 768px) {
-
+    .servicio-auto{
+        width: 85%;
+    }
+    .servicios-card-container {
+        @include tam (350px, 450px);
+        @include flex ();
+        text-align: justify;
+        justify-content: center; 
+    }
 }
 
 @media (max-width: 380px) {
+    .servicio-auto{
+        width: 85%;
+    }
+    .servicios-card-container {
+        width: 77% !important;
+        @include flex ();
+        text-align: justify;
+        justify-content: center; 
 
+        img {
+            width: 100% !important;
+        }
+    }
 }
 
 /* Media Query Promociones */
 
-@media (max-width: 1024px){
-
+@media (max-width: 1024px) {
+    .grid {
+        grid-template-areas:
+        'promocion-1 promocion-2'
+        'promocion-3 promocion-4'
+        'promocion-5 promocion-6' !important;
+    }
 }
 
+// Media Query para 768px
 @media (max-width: 768px) {
-    .grid {
-        grid-template-rows: repeat(6, 300px);
+    .auto{
+        width: 85%;
     }
-
-    .box {
-        width: 100%;
-        height: 300px;
+    .grid {
+        grid-template-areas:
+            'promocion-1'
+            'promocion-2'
+            'promocion-3'
+            'promocion-4'
+            'promocion-5'
+            'promocion-6' !important;
     }
 }
-
-@media (max-width: 480px) {
-    .grid {
-        grid-template-rows: repeat(6, 300px);
-    }
-
-    .box {
-        height: 300px;
-    }
-}
-
 
 /* Media Query Contacto */
 
@@ -247,25 +262,39 @@
 /* Media Query Footer */
 
 @media (max-width: 1024px) {
+    div a {
+        .facebook,
+        .instagram,
+        .twitter {
+            bottom: 10px;
+            right: 10px;
+            padding-right: 5px;
+            transition: none;
+        }
+    }
+
     .facebook,
     .instagram,
-    .twitter {
-        bottom: 10px;
-        right: 10px;
-        padding-right: 5px;
+    .twitter,
+    .wsp {
+        transition: width 0.3s ease;
     }
 
     .facebook {
-        width: 30px; 
-        margin-left: 10px;  
+        width: 10px; 
+        margin-left: 5px;  
     }
 
     .instagram {
-        width: 40px;
+        width: 8px;
     }
 
     .twitter {
-        width: 25px;
+        width: 6px;
+    }
+
+    .wsp {
+        width: 15px;
     }
 }
 
@@ -274,17 +303,16 @@
     .facebook,
     .instagram,
     .twitter {
-        bottom: 10px;
-        right: 10px;
+        bottom: 15px;
+        right: 15px;
         padding-right: 5px;
+        width: 30px; 
+        margin: 5px; 
     }
 
-    .facebook,
-    .instagram,
-    .twitter,
     .wsp {
-        width: 5px; 
-        margin: 0 5px; 
+        width: 15px;
+        border-radius: 70%;
     }
 }
 
