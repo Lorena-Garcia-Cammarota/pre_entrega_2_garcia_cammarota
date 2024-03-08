@@ -280,7 +280,6 @@ main .servicios {
   text-align: center;
 }
 main .servicios-container {
-  display: flex;
   margin: 10px;
 }
 main .servicios-container h2 {
@@ -288,7 +287,9 @@ main .servicios-container h2 {
 }
 main .servicios-container p {
   padding: 10px;
-  text-align: left;
+  margin-left: 20px;
+  margin-bottom: 25px;
+  text-align: center;
 }
 main .servicios-container-span {
   width: 100%;

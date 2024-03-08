@@ -7,7 +7,6 @@ main {
     }
 
     .servicios-container {
-        display: flex;
         margin: 10px;
 
         h2 {
@@ -16,7 +15,9 @@ main {
     
         p {
             padding: 10px;
-            text-align: left;
+            margin-left: 20px;
+            margin-bottom: 25px;
+            text-align: center;
         }
     }
     
